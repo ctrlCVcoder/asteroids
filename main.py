@@ -4,6 +4,7 @@
 import pygame
 from constants import *
 from player import Player
+from logger import log_state
 
 
 def main():
@@ -19,6 +20,7 @@ def main():
 
 
     while True:
+        log_state()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
